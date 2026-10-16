@@ -4,12 +4,13 @@
 
 const QUICK_TAGS = [
   "All Topics",
-  "Power Electronics",
-  "Renewable Energy & EV",
-  "Smart Grid & Microgrid",
-  "Hydrogen & Fuel Cells",
-  "Battery & Energy Storage",
-  "Robotics & IoT"
+  "Solar PV & Thermal Systems",
+  "Electric Vehicles & Wireless Charging",
+  "Green Hydrogen & Fuel Cells",
+  "Batteries & Energy Storage",
+  "Microgrid & Power Systems",
+  "Energy Materials & Composites",
+  "AI/ML & Digital Twins"
 ];
 
 const VIT_FACULTY = [
@@ -20,11 +21,11 @@ const VIT_FACULTY = [
     designation: "Professor Higher Academic Grade",
     school: "Center for Net Zero Technologies",
     department: "Center for Net Zero Technologies",
-    cabin: "TT-239",
-    email: "nrajasekar@vit.ac.in",
+    cabin: "TT-701",
+    email: "director.cnet@vit.ac.in",
 
     // Research Details (Area of Specialization)
-    researchDetails: "Power Electronics \n Smart Grid \n Optimization Techniques \n Renewable Energy Systems \n Fuel Cells\nORCID: https://orcid.org/0000-0001-6489-1736\nScopus: https://www.scopus.com/authid/detail.uri?authorId=35090434600\nGoogle Scholar: https://scholar.google.co.in/citations?user=OZkmc-sAAAAJ&hl=en\nh-index: 35  \ni10-index: 57",
+    researchDetails: "Power Electronics \n Smart Grid and microgrids\nEnergy management and optimisation\nSolar PV systems\n Renewable Energy Systems \n Fuel Cells\nORCID: https://orcid.org/0000-0001-6489-1736\nScopus: https://www.scopus.com/authid/detail.uri?authorId=35090434600\nGoogle Scholar: https://scholar.google.co.in/citations?user=OZkmc-sAAAAJ&hl=en\nh-index: 35  \ni10-index: 57",
 
     // Ongoing Consulting Project Details
     ongoingConsultingProjects: [
@@ -76,7 +77,7 @@ const VIT_FACULTY = [
       "Advances in Nature-Inspired Methods for Metaheuristics Optimization (2020)"
     ],
 
-    specialization: ["Power Electronics", "Smart Grid", "Renewable Energy & EV", "Fuel Cells"],
+    specialization: ["Power Electronics", "Smart Grid and microgrids", "Renewable Energy systems", "Fuel Cells","Energy management and optimisation","Solar PV systems"],
     roleCategory: ["PROFESSOR", "PHD_SUPERVISOR", "BTECH", "MTECH"],
     scholarLink: "https://scholar.google.co.in/citations?user=OZkmc-sAAAAJ&hl=en"
   },
@@ -88,11 +89,11 @@ const VIT_FACULTY = [
     designation: "Professor Higher Academic Grade",
     school: "Center for Net Zero Technologies",
     department: "Center for Net Zero Technologies",
-    cabin: "Not Available",
-    email: "delangovan@vit.ac.in",
+    cabin: "CDMM 206",
+    email: "elangovan.devaraj@vit.ac.in",
 
     // Research Details (Area of Specialization)
-    researchDetails: "Wireless Chargers for EV  \nDC-to-DC Converters for RE \nSustainable Transportation \nSmart DC Grid \nFuel Cell Vehicles\nORCID: https://orcid.org/0000-0001-8284-276X\nScopus: https://www.scopus.com/authid/detail.uri?authorId=37055454800\nGoogle Scholar: https://scholar.google.com/citations?hl=en&user=L1VHqW0AAAAJ\nh-index: 18 \ni10-index: 24",
+    researchDetails: "Electric vehicles\nWireless Charging\nDC-to-DC Converters \nSustainable Mobility\nRenewable energy conversion \nFuel Cell Vehicles\nORCID: https://orcid.org/0000-0001-8284-276X\nScopus: https://www.scopus.com/authid/detail.uri?authorId=37055454800\nGoogle Scholar: https://scholar.google.com/citations?hl=en&user=L1VHqW0AAAAJ\nh-index: 18 \ni10-index: 24",
 
     // Ongoing Consulting Project Details
     ongoingConsultingProjects: [
@@ -175,7 +176,7 @@ const VIT_FACULTY = [
       "Development of fuel cell Three-Wheeler for urban Green Transportation in India (Royal Academy of Engineering - UK)"
     ],
 
-    specialization: ["Renewable Energy & EV", "Robotics & IoT", "Power Electronics", "Fuel Cells"],
+    specialization: ["Electric vehicles","Wireless Charging","DC-to-DC Converters","Sustainable Mobility","Renewable energy conversion","Fuel Cell Vehicles"],
     roleCategory: ["PROFESSOR", "PHD_SUPERVISOR", "BTECH", "MTECH"],
     scholarLink: "https://scholar.google.com/citations?hl=en&user=L1VHqW0AAAAJ"
   },
@@ -187,11 +188,11 @@ const VIT_FACULTY = [
     designation: "Associate Professor Grade 1",
     school: "Center for Net Zero Technologies",
     department: "Center for Net Zero Technologies",
-    cabin: "SJT-613",
+    cabin: "TT 709",
     email: "kalaiselvan.n@vit.ac.in",
 
     // Research Details (Area of Specialization)
-    researchDetails: "Solar Photovoltaic Technology \nGreen Hydrogen \nE-waste Circular Economy \nElectric Vehicles\nORCID: https://orcid.org/0000-0003-3434-930X\nScopus: 57224953197\nGoogle Scholar: https://scholar.google.com/citations?user=C7IWdXQAAAAJ&hl=en\nh-index: 10 \ni10-index: 10",
+    researchDetails: "Solar Photovoltaic Technology \nGreen Hydrogen \nWaste-to-energy materials\nSustainable energy systems\nPV-electrolyzer systems \nElectric Vehicles\nORCID: https://orcid.org/0000-0003-3434-930X\nScopus: 57224953197\nGoogle Scholar: https://scholar.google.com/citations?user=C7IWdXQAAAAJ&hl=en\nh-index: 10 \ni10-index: 10",
 
     // Ongoing Consulting Project Details
     ongoingConsultingProjects: [
@@ -264,7 +265,7 @@ const VIT_FACULTY = [
       "Design and Performance Analysis of Maximum Power Extraction Charge Controller (MPECC) for Solar Photovoltaic System (2025)"
     ],
 
-    specialization: ["Solar PV Technology", "Green Hydrogen", "E-Waste Circular Economy", "Renewable Energy & EV"],
+    specialization: ["Solar Photovoltaic Technology","Green Hydrogen","Waste-to-energy materials","Sustainable energy systems","PV-electrolyzer systems","Electric Vehicles"],
     roleCategory: ["ASSOC_PROF", "PHD_SUPERVISOR", "BTECH"],
     scholarLink: "https://scholar.google.com/citations?user=C7IWdXQAAAAJ&hl=en"
   },
@@ -276,11 +277,11 @@ const VIT_FACULTY = [
     designation: "Associate Professor Grade 1",
     school: "Center for Net Zero Technologies",
     department: "Center for Net Zero Technologies",
-    cabin: "CBMR-106C",
+    cabin: "TT 703",
     email: "santanukumar.dash@vit.ac.in",
 
     // Research Details (Area of Specialization)
-    researchDetails: "Power System \nPower Electronics \nRenewable Energy System \nMicrogrid \nSmart Grid \nSustainable Transportation \nDC/AC Microgrid \nPower Quality \nIoT \nDigital Twin \nAI/ML\nORCID: 0000-0002-1816-0075\nScopus: 57195355671\nGoogle Scholar: https://scholar.google.co.in/citations?user=Fvu08xIAAAAJ&hl=en\nh-index: 19 \ni10-index: 40",
+    researchDetails: "Power System \nRenewable Energy integration \nMicrogrid and Energy Storage\nSustainable Transportation\nDigital Twin Technology\nAI/ML Applications\nORCID: 0000-0002-1816-0075\nScopus: 57195355671\nGoogle Scholar: https://scholar.google.co.in/citations?user=Fvu08xIAAAAJ&hl=en\nh-index: 19 \ni10-index: 40",
 
     ongoingConsultingProjects: [],
 
@@ -315,7 +316,7 @@ const VIT_FACULTY = [
       "Energy planning for a sustainable transition to a decarbonized generation scenario (2023)"
     ],
 
-    specialization: ["Power System", "Power Electronics", "Renewable Energy & EV", "Smart Grid & Microgrid", "IoT & Digital Twin"],
+    specialization: ["Power System","Renewable Energy integration","Microgrid and Energy Storage","Sustainable Transportation","Digital Twin Technology","AI/ML Applications"],
     roleCategory: ["ASSOC_PROF", "PHD_SUPERVISOR", "BTECH", "MTECH"],
     scholarLink: "https://scholar.google.co.in/citations?user=Fvu08xIAAAAJ&hl=en"
   },
@@ -327,17 +328,17 @@ const VIT_FACULTY = [
     designation: "Associate Professor Grade 1",
     school: "Center for Net Zero Technologies",
     department: "Center for Net Zero Technologies",
-    cabin: "Not Available",
+    cabin: "TT 701",
     email: "soundharrajan.v@vit.ac.in",
 
     // Research Details (Area of Specialization)
-    researchDetails: "Materials for Energy Storage \nSodium Ion Batteries \nZinc Ion Batteries \nManganese Ion Batteries\nORCID: https://orcid.org/0000-0003-0232-0705\nScopus: 57189026022\nGoogle Scholar: https://scholar.google.com/citations?user=sXVRJrQAAAAJ&hl=en\nh-index: 27 \ni10-index: 34",
+    researchDetails: "Li Ion Batteries \nSodium Ion Batteries \nZinc Ion Batteries \nManganese Ion Batteries\nAdvanced storage materials\nElectrochemical energy systems\nORCID: https://orcid.org/0000-0003-0232-0705\nScopus: 57189026022\nGoogle Scholar: https://scholar.google.com/citations?user=sXVRJrQAAAAJ&hl=en\nh-index: 27 \ni10-index: 34",
 
     ongoingConsultingProjects: [],
     completedFundedProjects: [],
     booksPublished: [],
 
-    specialization: ["Battery & Energy Storage", "Sodium Ion Batteries", "Zinc Ion Batteries", "Manganese Ion Batteries"],
+    specialization: ["Li ION Batteries", "Sodium Ion Batteries", "Zinc Ion Batteries", "Manganese Ion Batteries","Advanced storgae materials","Electrochemical energy systems"],
     roleCategory: ["ASSOC_PROF", "PHD_SUPERVISOR", "BTECH"],
     scholarLink: "https://scholar.google.com/citations?user=sXVRJrQAAAAJ&hl=en"
   },
@@ -349,11 +350,11 @@ const VIT_FACULTY = [
     designation: "Assistant Professor Senior Grade 1",
     school: "Center for Net Zero Technologies",
     department: "Center for Net Zero Technologies",
-    cabin: "Not Available",
+    cabin: "TT 709",
     email: "arjunsingh.k@vit.ac.in",
 
     // Research Details (Area of Specialization)
-    researchDetails: "Fuel Cells \nGreen Hydrogen Production and Storage \nSolar Energy \nConcentrated Solar Power \nHeat Transfer\nORCID: 0000-0003-1312-0522\nScopus: 57210982859\nGoogle Scholar: https://scholar.google.co.in/citations?user=jDRUx5YAAAAJ&hl=en\nh-index: 10 \ni10-index: 10",
+    researchDetails: "Fuel Cells \nGreen Hydrogen Production and Storage \nSolar and Concentrated Solar Power \nHeat Transfer\nSustainable systems\nORCID: 0000-0003-1312-0522\nScopus: 57210982859\nGoogle Scholar: https://scholar.google.co.in/citations?user=jDRUx5YAAAAJ&hl=en\nh-index: 10 \ni10-index: 10",
 
     // Ongoing Consulting Project Details
     ongoingConsultingProjects: [
@@ -392,7 +393,7 @@ const VIT_FACULTY = [
 
     booksPublished: [],
 
-    specialization: ["Hydrogen & Fuel Cells", "Solar Energy", "Concentrated Solar Power", "Heat Transfer"],
+    specialization: ["Fuel Cells", "Green Hydrogen Production and Storage ","Solar Energy and Concentrated Solar Power", "Heat Transfer","Sustainable systems"],
     roleCategory: ["BTECH", "MTECH"],
     scholarLink: "https://scholar.google.co.in/citations?user=jDRUx5YAAAAJ&hl=en"
   },
@@ -404,17 +405,17 @@ const VIT_FACULTY = [
     designation: "Assistant Professor Sr. Grade 1",
     school: "Center for Net Zero Technologies",
     department: "Center for Net Zero Technologies",
-    cabin: "Not Available",
+    cabin: "TT 701",
     email: "rc.sasikumar@vit.ac.in",
 
     // Research Details (Area of Specialization)
-    researchDetails: "Sustainable Structural and Energy Composites \nEnergy Storage and Conversion Technologies \nEMI Shielding\nORCID: 0009-0003-8639-3772\nScopus: 50033314831\nGoogle Scholar: https://scholar.google.com/citations?user=9tQJzvsAAAAJ&hl=en\nh-index: 4 \ni10-index: 2",
+    researchDetails: "Sustainable Structural and Energy Composites \nEnergy Storage and Conversion Technologies \nEMI Shielding\nCrystal Growth\nPhotocatalysis\nPhotocatalytic fuel cell\nSemiconductor Applications\nORCID: 0009-0003-8639-3772\nScopus: 50033314831\nGoogle Scholar: https://scholar.google.com/citations?user=9tQJzvsAAAAJ&hl=en\nh-index: 4 \ni10-index: 2",
 
     ongoingConsultingProjects: [],
     completedFundedProjects: [],
     booksPublished: [],
 
-    specialization: ["Sustainable Structural & Energy Composites", "Battery & Energy Storage", "EMI Shielding"],
+    specialization: ["Sustainable Structural & Energy Composites", "Energy Storage and conversion technologies", "EMI Shielding","Crystal Growth","Photocatalysis","Photocatalytic fuel cells","Semiconductor Applications"],
     roleCategory: ["BTECH"],
     scholarLink: "https://scholar.google.com/citations?user=9tQJzvsAAAAJ&hl=en"
   }
