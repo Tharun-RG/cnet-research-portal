@@ -619,6 +619,8 @@
 
   <!-- Load External Faculty Data File -->
   <script src="./facultyData.js"></script>
+  <script src="./facultyVectors.js"></script>
+  <script src="./semanticSearch.js"></script>
 
   <script>
     /* =========================================================================
@@ -652,6 +654,13 @@
       }
 
       setupKeyboardDismiss();
+
+      // Load the semantic model in the background (keyword search works meanwhile)
+      if (window.FacultySearch && typeof VIT_FACULTY !== "undefined") {
+        FacultySearch.init(VIT_FACULTY, () => {
+          if (document.getElementById("search-input").value.trim()) handleSearchFilterChange();
+        });
+      }
     });
 
     /* =========================================================================
@@ -809,47 +818,18 @@
       });
     }
 
+    let searchRequestId = 0;   // ignores stale async results while the user keeps typing
+
     function handleSearchFilterChange() {
-      const searchVal = document.getElementById("search-input").value.trim().toLowerCase();
+      const rawVal = document.getElementById("search-input").value.trim();
       const schoolVal = document.getElementById("school-filter").value;
       const roleVal = document.getElementById("role-filter").value;
       const clearBtn = document.getElementById("clear-search-btn");
 
-      if (searchVal.length > 0) {
-        clearBtn.classList.remove("hidden");
-      } else {
-        clearBtn.classList.add("hidden");
-      }
+      clearBtn.classList.toggle("hidden", rawVal.length === 0);
 
-      const filtered = VIT_FACULTY.filter(fac => {
-        let matchesText = true;
-        if (searchVal) {
-          const nameMatch = fac.name && fac.name.toLowerCase().includes(searchVal);
-          const cabinMatch = fac.cabin && fac.cabin.toLowerCase().includes(searchVal);
-          const schoolMatch = fac.school && fac.school.toLowerCase().includes(searchVal);
-          const deptMatch = fac.department && fac.department.toLowerCase().includes(searchVal);
-          const researchMatch = fac.researchDetails && fac.researchDetails.toLowerCase().includes(searchVal);
-          
-          const consultingMatch = Array.isArray(fac.ongoingConsultingProjects) && fac.ongoingConsultingProjects.some(cp => 
-            (cp.title && cp.title.toLowerCase().includes(searchVal)) || (cp.client && cp.client.toLowerCase().includes(searchVal))
-          );
-          
-          const fundedMatch = Array.isArray(fac.completedFundedProjects) && fac.completedFundedProjects.some(fp => 
-            (fp.title && fp.title.toLowerCase().includes(searchVal)) || (fp.agency && fp.agency.toLowerCase().includes(searchVal)) ||
-            (fp.fundingAgency && fp.fundingAgency.toLowerCase().includes(searchVal))
-          );
-
-          const bookMatch = Array.isArray(fac.booksPublished) && fac.booksPublished.some(b => {
-            const str = typeof b === "string" ? b : (b.title || "");
-            return str.toLowerCase().includes(searchVal);
-          });
-
-          const patentMatch = (Array.isArray(fac.patentsGranted) && fac.patentsGranted.some(p => (p.title || "").toLowerCase().includes(searchVal))) ||
-                              (Array.isArray(fac.patentsPublished) && fac.patentsPublished.some(p => (p.title || "").toLowerCase().includes(searchVal)));
-
-          matchesText = nameMatch || cabinMatch || schoolMatch || deptMatch || researchMatch || consultingMatch || fundedMatch || bookMatch || patentMatch;
-        }
-
+      // 1) Dropdown + pill filters (unchanged logic)
+      const base = VIT_FACULTY.filter(fac => {
         let matchesSchool = true;
         if (schoolVal !== "ALL") {
           const schoolStr = (fac.school || "").toLowerCase();
@@ -873,11 +853,25 @@
           const detailMatch = fac.researchDetails && fac.researchDetails.toLowerCase().includes(pillLower);
           matchesPill = specMatch || detailMatch;
         }
-
-        return matchesText && matchesSchool && matchesRole && matchesPill;
+        return matchesSchool && matchesRole && matchesPill;
       });
 
-      renderFacultyCards(filtered);
+      // 2) No search text -> just show filtered list
+      if (!rawVal) {
+        searchRequestId++;
+        renderFacultyCards(base);
+        return;
+      }
+
+      // 3) Search text -> instant keyword/related-term results, then upgrade to semantic ranking
+      const myId = ++searchRequestId;
+      renderFacultyCards(FacultySearch.searchLexical(rawVal, base));
+
+      if (FacultySearch.isReady()) {
+        FacultySearch.search(rawVal, base).then(results => {
+          if (myId === searchRequestId) renderFacultyCards(results);
+        });
+      }
     }
 
     function clearSearchInput() {
